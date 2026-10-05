@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala 7 Sneaker Store</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body> 
+    <header class="header">
+        
+            <h1 class="logo">Thala 7 Sneaker Store</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">More</a></li>
+
+                </ul>
+            </nav>
+
+        <div class ="header-right">
+          </div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+        </div>
+
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="profile">A</div>
+
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="small-logo"> SEVEN
+                <span>7</span>
+            </div>
+
+            <h1>7 !! Thala For<br>
+            <span>a Reason !</span>
+        </h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur, pretium quisque lorem feugiat justo ut orci.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images.jpg" alt="Sneaker image">
+
+    </section>
+    <section class="services">
+
+    <div class="service-box">
+        <i class="fa-regular fa-comments"></i>
+        <div>
+            <strong>2k+</strong>
+            <small>Reviews</small>
+        </div>
+    </div>
+
+    <div class="service-box">
+        <i class="fa-solid fa-users"></i>
+        <div>
+            <strong>30k+</strong>
+            <small>Customers</small>
+        </div>
+    </div>
+
+    <div class="service-box">
+        <i class="fa-solid fa-medal"></i>
+        <div>
+            <strong>High</strong>
+            <small>Quality</small>
+        </div>
+    </div>
+
+    <div class="service-box">
+        <i class="fa-solid fa-star"></i>
+        <div>
+            <strong>4.5/5</strong>
+            <small>Rating</small>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCT DISPLAY ================= -->
+<section class="product-section" id="product">
+
+    <div class="breadcrumb">
+        Home &nbsp; / &nbsp; THALA FOR A REASON &nbsp; / &nbsp;
+        Seven By M.S. Dhoni
+    </div>
+
+    <div class="product-main">
+
+        <!-- LEFT -->
+        <div class="product-left">
+
+            <div class="main-product-image">
+                <img id="mainImage"
+                     src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                     alt="Running Shoe">
+            </div>
+
+            <div class="gallery">
+
+                <div class="gallery-img"
+                     onclick="changeImage(this)">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80">
+                </div>
+
+                <div class="gallery-img"
+                     onclick="changeImage(this)">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=500&q=80">
+                </div>
+
+                <div class="gallery-img"
+                     onclick="changeImage(this)">
+                    <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=500&q=80">
+                </div>
+
+                <div class="gallery-img"
+                     onclick="changeImage(this)">
+                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=500&q=80">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+        <div class="product-info">
+
+            <p class="brand">Seven By M.S. Dhoni</p>
+
+            <h2>
+                Women's Hogun Multi-Color
+                Running Shoes
+            </h2>
+
+            <p class="description">
+                For exceptional fit, feel and smooth transitions
+                get going with these durable shoes. Designed with
+                comfort, style and performance in mind.
+            </p>
+
+            <div class="price">
+                ₹1,334
+                <span>Save 12%</span>
+            </div>
+
+            <p class="tax">Inclusive of all Taxes</p>
+
+            <div class="quantity">
+                <button onclick="decreaseQty()">−</button>
+                <span id="quantity">1</span>
+                <button onclick="increaseQty()">+</button>
+            </div>
+
+            <button class="cart-btn" onclick="addToCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHOPPING CART ================= -->
+<section class="cart-section" id="cart">
+
+    <h1>Shopping Cart</h1>
+
+    <div class="cart-layout">
+
+        <!-- LEFT -->
+        <div class="cart-left">
+
+            <div class="cart-heading">
+                <span>Product</span>
+                <span>Quantity</span>
+                <span>Price</span>
+                <span></span>
+            </div>
+
+            <div class="cart-item">
+
+                <div class="cart-product">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=200&q=80">
+
+                    <span>
+                        Seven By M.S. Dhoni
+                    </span>
+                </div>
+
+                <div class="cart-quantity">
+                    <button onclick="cartMinus()">−</button>
+                    <span id="cartQty">1</span>
+                    <button onclick="cartPlus()">+</button>
+                </div>
+
+                <strong>₹1,334</strong>
+
+                <button class="remove">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <div class="cart-item">
+
+                <div class="cart-product">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=200&q=80">
+
+                    <span>
+                        Seven Running Shoes
+                    </span>
+                </div>
+
+                <div class="cart-quantity">
+                    <button>−</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+
+                <strong>₹1,499</strong>
+
+                <button class="remove">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+        <div class="order-card">
+
+            <h3>Enter Coupon Code</h3>
+
+            <div class="coupon">
+                <input type="text" placeholder="COUPON CODE">
+                <button>Apply Coupon</button>
+            </div>
+
+            <div class="summary">
+                <div>
+                    <span>Sub Total</span>
+                    <strong>₹4,700</strong>
+                </div>
+
+                <div>
+                    <span>Taxes</span>
+                    <strong>₹199</strong>
+                </div>
+
+                <div>
+                    <span>Discount</span>
+                    <strong>₹0</strong>
+                </div>
+
+                <hr>
+
+                <div class="total">
+                    <span>Total</span>
+                    <strong>₹4,899</strong>
+                </div>
+            </div>
+
+            <a href="#payment" class="pay-btn">
+                Pay Now ₹4,899
+            </a>
+
+            <div class="payment-icons">
+                <span>Secure</span>
+                <b>Razorpay</b>
+                <span>✓ Safe</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a href="#product" class="continue">
+        ← Continue Shopping
+    </a>
+
+</section>
+
+
+<!-- ================= PAYMENT SECTION ================= -->
+<section class="payment-section" id="payment">
+
+    <div class="checkout-left">
+
+        <p class="checkout-title">Checkout</p>
+
+        <h3>Contact Details</h3>
+
+        <label>Email ID</label>
+        <input type="email" placeholder="Enter Email">
+
+
+        <h3>Payment</h3>
+
+        <div class="payment-methods">
+
+            <button class="active">
+                <i class="fa-regular fa-credit-card"></i>
+                Card
+            </button>
+
+            <button>
+                <i class="fa-brands fa-bitcoin"></i>
+                Crypto
+            </button>
+
+            <button>
+                <i class="fa-solid fa-building-columns"></i>
+                Bank
+            </button>
+
+            <button>
+                <i class="fa-solid fa-ellipsis"></i>
+            </button>
+
+        </div>
+
+
+        <div class="card-form">
+
+            <label>Card Number</label>
+            <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+
+            <div class="form-row">
+
+                <div>
+                    <label>Expiry</label>
+                    <input type="text" placeholder="MM/YY">
+                </div>
+
+                <div>
+                    <label>CVC</label>
+                    <input type="text" placeholder="CVC">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div>
+                    <label>Country</label>
+                    <select>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>ZIP</label>
+                    <input type="text" placeholder="ZIP">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="payment-summary">
+
+        <h2>Order Summary</h2>
+
+        <div class="summary-card">
+
+            <div class="coupon">
+                <input type="text" placeholder="COUPON CODE">
+                <button>Apply Coupon</button>
+            </div>
+
+            <div class="summary">
+                <div>
+                    <span>Sub Total</span>
+                    <strong>₹4,700</strong>
+                </div>
+
+                <div>
+                    <span>Taxes</span>
+                    <strong>₹199</strong>
+                </div>
+
+                <div>
+                    <span>Discount</span>
+                    <strong>₹0</strong>
+                </div>
+
+                <hr>
+
+                <div class="total">
+                    <span>Total</span>
+                    <strong>₹4,899</strong>
+                </div>
+            </div>
+
+            <button class="final-pay">
+                Pay Now ₹4,899
+            </button>
+
+            <div class="razorpay">
+                  Secure &nbsp; | &nbsp;
+                <b>Razorpay</b> &nbsp; | &nbsp;
+                ✓ Safe
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Thala 7 Sneaker Store | CSS Mini Project</p>
+</footer>
+
+</body>
+
+
+</html>
